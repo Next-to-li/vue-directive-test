@@ -2,15 +2,15 @@
  * @Author: lichenxi
  * @Date: 2023-05-11 22:16:05
  * @LastEditors: lichenxi
- * @LastEditTime: 2023-05-11 23:18:16
+ * @LastEditTime: 2023-05-12 00:47:02
  * @Description: 
 -->
 <template>
-  <div class="drag" v-resizable="'right, bottom'">
-    <a class="top-drag"></a>
-    <a class="right-drag"></a>
-    <a class="bottom-drag"></a>
-    <a class="left-drag"></a>
+  <div class="drag" v-resizable="'right,left,top,bottom'">
+    <a class="top-drag" data-dragside="top"></a>
+    <a class="right-drag" data-dragside="right"></a>
+    <a class="bottom-drag" data-dragside="bottom"></a>
+    <a class="left-drag" data-dragside="left"></a>
   </div>
 </template>
 <script setup>
@@ -20,6 +20,8 @@
 .drag {
   max-width: 500px;
   max-height: 400px;
+  min-width: 60px;
+  min-height: 60px;
   background: beige;
   width: 200px;
   height: 200px;
